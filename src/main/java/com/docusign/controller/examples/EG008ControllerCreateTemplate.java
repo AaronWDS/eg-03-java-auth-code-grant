@@ -66,9 +66,9 @@ public class EG008ControllerCreateTemplate extends EGController {
         boolean createdNewTemplate;
         if (Integer.parseInt(results.getResultSetSize()) > 0) {
             // Yes. Save the template id and name
-            EnvelopeTemplateResult template = results.getEnvelopeTemplates().get(0);
-            templateId = template.getTemplateId();
-            resultsTemplateName = template.getName();
+            //EnvelopeTemplateResult template = results.getEnvelopeTemplates().get(0);
+            //templateId = template.getTemplateId();
+            //resultsTemplateName = template.getName();
             createdNewTemplate = false;
         } else {
             // No. Make a new template
@@ -84,12 +84,12 @@ public class EG008ControllerCreateTemplate extends EGController {
         }
 
         // Save templateId
-        session.setAttribute("templateId", templateId);
+        //session.setAttribute("templateId", templateId);
         String msg = createdNewTemplate ?
                 "The template has been created!" :
                 "The template already exists in your account.";
 
-        setMessage(msg + "<br/>Template name: " + resultsTemplateName + ", ID " + templateId + ".");
+        //setMessage(msg + "<br/>Template name: " + resultsTemplateName + ", ID " + templateId + ".");
 
         return null;
     }
@@ -196,8 +196,8 @@ public class EG008ControllerCreateTemplate extends EGController {
         textInsteadOfNumber.setFont("helvetica");
         textInsteadOfNumber.setFontSize("size14");
         textInsteadOfNumber.setTabLabel("numbersOnly");
-        textInsteadOfNumber.setHeight(23);
-        textInsteadOfNumber.setWidth(84);
+        textInsteadOfNumber.setHeight("23");
+        textInsteadOfNumber.setWidth("84");
         textInsteadOfNumber.required("false");
 
         RadioGroup radioGroup = new RadioGroup();
@@ -218,8 +218,8 @@ public class EG008ControllerCreateTemplate extends EGController {
         text.setFont("helvetica");
         text.setFontSize("size14");
         text.setTabLabel("text");
-        text.setHeight(23);
-        text.setWidth(84);
+        text.setHeight("23");
+        text.setWidth("84");
         text.required("false");
 
         // Tabs are set per recipient / signer
@@ -249,7 +249,7 @@ public class EG008ControllerCreateTemplate extends EGController {
         // The order in the docs array determines the order in the env
         template.setDocuments(Arrays.asList(doc));
         template.setEmailSubject("Please sign this document");
-        template.setEnvelopeTemplateDefinition(envelopeTemplateDefinition);
+        //template.setEnvelopeTemplateDefinition(envelopeTemplateDefinition);
         template.setRecipients(recipients);
         template.setStatus("created");
 

@@ -1,0 +1,13 @@
+node_modules/
+coverage
+.nyc_output/
+*.DS_Store
+auth-info.json
+config.json
+.idea
+.classpath
+.settings
+.project
+target/
+target/classes/com/docusign/esign/*/*.class
+target/test-classes/*.class
