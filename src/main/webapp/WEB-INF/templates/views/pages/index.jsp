@@ -125,12 +125,49 @@
     <a target ='_blank' href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/EnvelopeViews/createRecipient">EnvelopeViews::createRecipient</a>.
   </p>
 
-  <h2>Payments Example</h2>
   <h4 id="example014">14. <a href="eg014">Send an envelope with an order form and payment field</a></h4>
   <p>Anchor text
     (<a target ='_blank' href="https://support.docusign.com/en/guides/AutoPlace-New-DocuSign-Experience">AutoPlace</a>)
     is used to position the fields in the documents.
   </p>
+  <p>API method used:
+    <a target ='_blank' href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create">Envelopes::create</a>.
+  </p>
+
+  <h4>15. Get the envelope tab data</h4>
+  <p>Coming Soon
+  </p>
+
+  <h4>16. Set envelope tab values</h4>
+  <p>Coming Soon
+  </p>
+
+  <h4>17. Set template tab values</h4>
+  <p>Coming Soon
+  </p>
+
+  <h4>18. Get the envelope custom field data (metadata)</h4>
+  <p>Coming Soon
+  </p>
+
+
+  <h4 id="example019">19. <a href="eg019">Send an envelope with Access Code Authentication</a></h4>
+  <p>API method used:
+    <a target ='_blank' href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create">Envelopes::create</a>.
+  </p>
+
+  <h4 id="example020">20. <a href="eg020">Send an envelope with SMS Authentication</a></h4>
+  <p>API method used:
+    <a target ='_blank' href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create">Envelopes::create</a>.
+  </p>
+
+  <h4 id="example021">21. <a href="eg021">Send an envelope with Phone Authentication</a></h4>
+
+  <p>API method used:
+    <a target ='_blank' href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create">Envelopes::create</a>.
+  </p>
+
+  <h4 id="example022">22. <a href="eg022">Send an envelope with Knowledge-Based Authentication</a></h4>
   <p>API method used:
     <a target ='_blank' href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create">Envelopes::create</a>.
   </p>
