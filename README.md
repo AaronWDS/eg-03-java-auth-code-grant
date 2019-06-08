@@ -48,6 +48,22 @@ This repo is a Java Spring Boot application that demonstrates:
    feature.
 1. **Payments example: an order form, with online payment by credit card.**
    [Source.](https://github.com/docusign/eg-03-java-auth-code-grant/blob/master/src/main/java/com/docusign/controller/examples/EG014ControllerCollectPayment.java)
+1. **Get the envelope tab data.** (Coming soon...)
+1. **Set envelope tab values.** (Coming soon...)
+1. **Set template tab values.** (Coming soon...)
+1. **Get the envelope custom field data (metadata).** (Coming soon...)
+1. **Requiring an Access Code for a Recipient**
+   [Source.](./src/main/java/com/docusign/controller/examples/EG019ControllerAccessCodeAuthentication.java)
+   This example sends and envelope that requires an access-code for the purpose of multi-factor authentication.
+1. **Requiring SMS authentication for a recipient**
+   [Source.](./src/main/java/com/docusign/controller/examples/EG020ControllerSmsAuthentication.java)
+   This example sends and envelope that requires entering in a six digit code from an text message for the purpose of multi-factor authentication.
+1. **Requiring Phone authentication for a recipient**
+   [Source.](./src/main/java/com/docusign/controller/examples/EG021ControllerPhoneAuthentication.java)
+   This example sends and envelope that requires entering in a voice-based response code for the purpose of multi-factor authentication.
+1. **Requiring Knowledge-Based Authentication (KBA) for a Recipient**
+   [Source.](./src/main/java/com/docusign/controller/examples/EG022ControllerKBAAuthentication.java)
+   This example sends and envelope that requires passing a Public records check to validate identity for the purpose of multi-factor authentication.
 
 
 ## Installation
