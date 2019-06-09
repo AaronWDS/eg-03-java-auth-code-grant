@@ -48,7 +48,7 @@ public class EG009ControllerUseTemplate extends EGController {
 
 
         ApiClient apiClient = new ApiClient(basePath);
-        apiClient.addDefaultHeader("Authorization", "Bearer " + accessToken);
+        apiClient.setAccessToken(accessToken, null);
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
         EnvelopeDefinition envelope = makeEnvelope(args);
         EnvelopeSummary result = envelopesApi.createEnvelope(accountId, envelope);

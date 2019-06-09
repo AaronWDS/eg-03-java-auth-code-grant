@@ -49,7 +49,7 @@ public class EG005ControllerEnvelopeRecipients extends EGController {
 
         // Step 1. get envelope recipients
         ApiClient apiClient = new ApiClient(basePath);
-        apiClient.addDefaultHeader("Authorization", "Bearer " + accessToken);
+        apiClient.setAccessToken(accessToken, null);
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
         setMessage("Results from the EnvelopeRecipients::list method:");
         return envelopesApi.listRecipients(accountId, envelopeId);

@@ -53,7 +53,7 @@ public class EG008ControllerCreateTemplate extends EGController {
 
         // Step 1. list existing templates
         ApiClient apiClient = new ApiClient(basePath);
-        apiClient.addDefaultHeader("Authorization", "Bearer " + accessToken);
+        apiClient.setAccessToken(accessToken, null);
         TemplatesApi templatesApi = new TemplatesApi(apiClient);
         TemplatesApi.ListTemplatesOptions options = templatesApi.new ListTemplatesOptions();
         options.setSearchText(templateName);

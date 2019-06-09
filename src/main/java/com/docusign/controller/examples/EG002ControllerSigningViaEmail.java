@@ -51,7 +51,7 @@ public class EG002ControllerSigningViaEmail extends EGController {
 
         // Step 2: Construct your API headers
         ApiClient apiClient = new ApiClient(basePath);
-        apiClient.addDefaultHeader("Authorization", "Bearer " + accessToken);
+        apiClient.setAccessToken(accessToken, null);
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
 
 

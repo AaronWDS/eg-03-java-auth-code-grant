@@ -49,7 +49,7 @@ public class EG014ControllerCollectPayment extends EGController {
 
 
         ApiClient apiClient = new ApiClient(basePath);
-        apiClient.addDefaultHeader("Authorization", "Bearer " + accessToken);
+        apiClient.setAccessToken(accessToken, null);
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
 
         // Step 1. Make the envelope request body

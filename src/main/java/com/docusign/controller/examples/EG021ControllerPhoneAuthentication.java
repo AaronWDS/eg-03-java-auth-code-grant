@@ -50,7 +50,7 @@ public class EG021ControllerPhoneAuthentication extends EGController {
 
         // Step 2: Construct your API headers
         ApiClient apiClient = new ApiClient(basePath);
-        apiClient.addDefaultHeader("Authorization", "Bearer " + accessToken);
+        apiClient.setAccessToken(accessToken, null);
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
 
         // Step 3: Construct your envelope JSON body
