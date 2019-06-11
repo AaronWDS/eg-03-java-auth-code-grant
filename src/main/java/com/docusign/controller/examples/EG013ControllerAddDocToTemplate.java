@@ -57,7 +57,7 @@ public class EG013ControllerAddDocToTemplate extends EGController {
 
 
         ApiClient apiClient = new ApiClient(basePath);
-        apiClient.setAccessToken(accessToken, null);
+        apiClient.setAccessToken(accessToken, 3600L);
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
 
         // Step 1. Make the envelope request body

@@ -52,7 +52,7 @@ public class EG006ControllerEnvelopeDocs extends EGController {
 
 
         ApiClient apiClient = new ApiClient(basePath);
-        apiClient.setAccessToken(accessToken, null);
+        apiClient.setAccessToken(accessToken, 3600L);
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
         // Step 1. List the envelope's documents
         EnvelopeDocumentsResult result = envelopesApi.listDocuments(accountId, envelopeId);

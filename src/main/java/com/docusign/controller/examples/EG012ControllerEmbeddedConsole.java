@@ -49,7 +49,7 @@ public class EG012ControllerEmbeddedConsole extends EGController {
         // config.appUrl  (url of the application itself)
 
         ApiClient apiClient = new ApiClient(basePath);
-        apiClient.setAccessToken(accessToken, null);
+        apiClient.setAccessToken(accessToken, 3600L);
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
 
         // Step 1. create the NDSE view

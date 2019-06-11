@@ -42,7 +42,7 @@ public class EG003ControllerListEnvelopes extends EGController {
         String accountId = args.getAccountId();
 
         ApiClient apiClient = new ApiClient(basePath);
-        apiClient.setAccessToken(accessToken, null);
+        apiClient.setAccessToken(accessToken, 3600L);
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
         ListStatusChangesOptions options = envelopesApi.new ListStatusChangesOptions();
 
