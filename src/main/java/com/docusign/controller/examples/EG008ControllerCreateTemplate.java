@@ -66,9 +66,10 @@ public class EG008ControllerCreateTemplate extends EGController {
         boolean createdNewTemplate;
         if (Integer.parseInt(results.getResultSetSize()) > 0) {
             // Yes. Save the template id and name
-            EnvelopeTemplateResult template = results.getEnvelopeTemplates().get(0);
-            templateId = template.getTemplateId();
-            resultsTemplateName = template.getName();
+
+            //EnvelopeTemplateResult template = results.getEnvelopeTemplates().get(0);
+            templateId = results.getEnvelopeTemplates().get(0).getTemplateId();
+            resultsTemplateName = results.getEnvelopeTemplates().get(0).getName();
             createdNewTemplate = false;
         } else {
             // No. Make a new template
@@ -196,8 +197,8 @@ public class EG008ControllerCreateTemplate extends EGController {
         textInsteadOfNumber.setFont("helvetica");
         textInsteadOfNumber.setFontSize("size14");
         textInsteadOfNumber.setTabLabel("numbersOnly");
-        textInsteadOfNumber.setHeight(23);
-        textInsteadOfNumber.setWidth(84);
+        textInsteadOfNumber.setHeight("23");
+        textInsteadOfNumber.setWidth("84");
         textInsteadOfNumber.required("false");
 
         RadioGroup radioGroup = new RadioGroup();
@@ -218,8 +219,8 @@ public class EG008ControllerCreateTemplate extends EGController {
         text.setFont("helvetica");
         text.setFontSize("size14");
         text.setTabLabel("text");
-        text.setHeight(23);
-        text.setWidth(84);
+        text.setHeight("23");
+        text.setWidth("84");
         text.required("false");
 
         // Tabs are set per recipient / signer
@@ -239,17 +240,19 @@ public class EG008ControllerCreateTemplate extends EGController {
         recipients.setCarbonCopies(Arrays.asList(cc1));
 
         // create the envelope template definition object
-        EnvelopeTemplateDefinition envelopeTemplateDefinition = new EnvelopeTemplateDefinition();
-        envelopeTemplateDefinition.setDescription("Example template created via the API");
-        envelopeTemplateDefinition.setName(args.getTemplateName());
-        envelopeTemplateDefinition.setShared("false");
+        //EnvelopeTemplateDefinition envelopeTemplateDefinition = new EnvelopeTemplateDefinition();
+        //envelopeTemplateDefinition.setDescription("Example template created via the API");
+        //envelopeTemplateDefinition.setName(args.getTemplateName());
+        //envelopeTemplateDefinition.setShared("false");
 
         // create the overall template definition
         EnvelopeTemplate template = new EnvelopeTemplate();
         // The order in the docs array determines the order in the env
         template.setDocuments(Arrays.asList(doc));
         template.setEmailSubject("Please sign this document");
-        template.setEnvelopeTemplateDefinition(envelopeTemplateDefinition);
+        template.setDescription("Example template created via the API");
+        template.setName(args.getTemplateName());
+        template.setShared("false");
         template.setRecipients(recipients);
         template.setStatus("created");
 
